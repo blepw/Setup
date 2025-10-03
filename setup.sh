@@ -26,8 +26,8 @@ banner() {
   \___ \ ) _)   )(  ) \/ ( ) __/
   (____/(____) (__) \____/(__)
 
-   Version :${orange} ${os} ${version}
-   Script version :${orange} ${script_version}
+   Version :${orange} ${os} ${version}${reset}
+   ${white}Script version :${orange} ${script_version}
 
 ${reset}"
 }
@@ -145,14 +145,13 @@ EOF
 
 
 create_dirs(){
-    echo "${blue}[${yellow}!${blue}] ${white} Creating directories in home"
+    echo "${blue}[${yellow}!${blue}] ${white}Creating directories in home"
     mkdir -p ~/Decompile
     mkdir -p ~/github
 }
 
 
 appearance() {
-
     echo "${blue}[${yellow}!${blue}] ${white} Set Desktop background ${reset}"
     gsettings set org.gnome.desktop.background primary-color '#000000'
     gsettings set org.gnome.desktop.background color-shading-type 'solid'
@@ -387,6 +386,7 @@ install_resilio_sync
 github
 
 # configs
+configuration
 bashrc_configs
 appearance
 
